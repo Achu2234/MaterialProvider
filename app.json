@@ -1,0 +1,27 @@
+{
+    "name": "Material-Bot",
+    "description": "A Simple Material Provider Telegram Bot",
+    "repository": "https://github.com/AVBotz-TG/GTranslatorTG",
+    "keywords": [
+        "telegram",
+        "pyrogram",
+        "study",
+        "entrance"
+    ],
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your Bot token from @Botfather"
+        },
+        "API_ID": {
+            "description": "Your API_ID from https://my.telegram.org/apps"
+        },
+        "API_HASH": {
+            "description": "Your API_HASH from https://my.telegram.org/apps"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
