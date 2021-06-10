@@ -1,6 +1,6 @@
 # Made with python3
 # @Animesh_941
-# Copyright permission under MIT License
+# Copyright permission under GNU License
 
 import os
 from pyrogram import Client, filters
@@ -93,11 +93,14 @@ DISCLAIMER_BUTTONS = InlineKeyboardMarkup(
             InlineKeyboardButton('🏠 Home', callback_data='home')
            ]
         ]
+     ) 
 CLOSE_BUTTONS = InlineKeyboardMarkup(
-        [[
+        [
+            [
         InlineKeyboardButton('⛔️ Close', callback_data='close')
-        ]]
-    )
+            ]
+         ]
+     )
 
 @AnimeshVerma.on_callback_query()
 async def cb_data(bot, update):
