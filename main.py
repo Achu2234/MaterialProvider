@@ -127,7 +127,7 @@ async def cb_data(bot, update):
             text=DISCLAIMER_TEXT,
             disable_web_page_preview=True,
             reply_markup=DISCLAIMER_BUTTONS
-    else:
+    else update.data == "close":
         await update.message.delete()
     
 
@@ -143,7 +143,7 @@ async def help(bot, update):
 
 @AnimeshVerma.on_message(filters.command(["help"]))
 async def start(bot, update):
-    text = START_TEXT.format(update.from_user.mention)
+    text = HELP_TEXT.format(update.from_user.mention)
     reply_markup = HELP_BUTTONS
     await update.reply_text(
         text=text,
