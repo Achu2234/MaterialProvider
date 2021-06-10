@@ -93,7 +93,7 @@ DISCLAIMER_BUTTONS = InlineKeyboardMarkup(
             InlineKeyboardButton('🏠 Home', callback_data='home')
            ]
         ]
-CLOSE_BUTTON = InlineKeyboardMarkup(
+CLOSE_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('⛔️ Close', callback_data='close')
         ]]
