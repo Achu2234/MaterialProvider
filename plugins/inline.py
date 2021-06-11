@@ -73,7 +73,7 @@ async def answer(bot, query):
 
 
 def get_reply_markup(username, query):
-    buttons = [
+    FILES_BUTTONS = [
                  [
                   InlineKeyboardButton('● Search Again', switch_inline_query_current_chat=query),
                   InlineKeyboardButton('● Join Channel', url='https://t.me/Librarian_Official'),
