@@ -12,7 +12,8 @@ logging.getLogger().setLevel(logging.ERROR
                              
 from pyrogram import Client, filters
 from pyrogram.raw.all import layer
-from utils import Media              
+from utils import Media
+from info import SESSION, API_ID, API_HASH, BOT_TOKEN
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 AnimeshVerma = Client(
@@ -50,12 +51,32 @@ HELP_TEXT = """
  **――――――――――――――――――――――**
 ✨ 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 [𝗧𝗲𝗮𝗺 𝗟𝗶𝗯𝗿𝗮𝗿𝗶𝗮𝗻™️](https://telegram.me/Team_Librarian)
 """
+FILES_TEXT = """
+**★ Hello {}, You Can Search Your Desired Materials anytime via Inline Mode.**
+**❍ With this mode, You can get your desired Books, Handwritten Notes, Short Notes in PDF Format directly which are available in Team Librarian Database.**
+**❍ You Can Also Request Your Book To Be Added In Our Database, Request Your Book via @LibrarianHelpBot.**
 
+**➧ To use this bot, Type Our Bot's Username and Start Searching,**
+    **@EntranceMaterialsBot {Your Filename}**
+
+**➧ Check This Demo {Example}:** 
+    `@EntranceMaterialsBot Ncert`
+
+**★ You can also use the Buttons Below For Searching Your Files, Click**
+**[● Search Here] :** To Search Files in this Chat.
+**[● Go Inline] :** To Search Your Files in another Chat.
+
+**★ For Reporting any Issues, Or If you need any help, You can report them at the Support Group @Librarian_Institute**
+
+✨ 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 [𝗧𝗲𝗮𝗺 𝗟𝗶𝗯𝗿𝗮𝗿𝗶𝗮𝗻™️](https://telegram.me/Team_Librarian)
+"""
+                             
 ABOUT_TEXT = """
 **● Name : Material Provider Bot**
 **● Creator : [Animesh](https://telegram.me/AniMesH941)**
 **● Language : [Python3](https://python.org)**
 **● Server : [Heroku](https://heroku.com)**
+**● Source Code : [Click Here](https://t.me/Want_SourceCode)**
 
 **● Powered By : [Team Librarian™️](https://telegram.me/Team_Librarian)**
 """
@@ -130,6 +151,16 @@ async def start(bot, update):
         disable_web_page_preview=True,
         reply_markup=reply_markup
     )
+@AnimeshVerma.on_message(filters.command(["files"]))
+async def help(bot, update):
+            text=FILES_TEXT.format(update.from_user.mention),
+            reply_markup = FILES_BUTTONS
+    await update.reply_text(
+        text=text,
+        disable_web_page_preview=True,
+        reply_markup=reply_markup
+    )
+                             
 @AnimeshVerma.on_message(filters.command(["help"]))
 async def help(bot, update):
     text = HELP_TEXT.format(update.from_user.mention)
