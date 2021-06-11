@@ -24,55 +24,55 @@ logging.getLogger().setLevel(logging.ERROR
     api_hash = os.environ["API_HASH"]
    )
 
-START_TEXT = """ **Hello {}, I am a Simple Material Provider Bot.**
-**I Can Provide You all Materials Related to Entrance Examinations**
+START_TEXT = """<b> Hello {}, I am a Simple Material Provider Bot.</b>
+<b>I Can Provide You all Materials Related to Entrance Examinations</b>
 
-**Check Below Buttons To know more:**
-**Developed By [𝗔𝗡𝗜𝗠𝗘𝗦𝗛](https://t.me/AniMesH941)**
+<b>Check Below Buttons To know more:</b>
+<b>Developed By [𝗔𝗡𝗜𝗠𝗘𝗦𝗛](https://t.me/AniMesH941)</b>
 """
 
-HELP_TEXT = """ **☛ Hii {}, I Can Provide You Any Book In PDF Format**
-**Although I'm The First Bot On Whole Telegram, Developed Using python**
+HELP_TEXT = """<b>☛ Hii {}, I Can Provide You Any Book In PDF Format
+Although I'm The First Bot On Whole Telegram, Developed Using python</b>
 
-**🤖 Features of this Bot-
+<b>🤖 Features of this Bot-
  ┣ Get Books on Demand
  ┣ All variety of books 
  ┣ All competitive exams books
  ┣ All novels/ magazines/ newspaper.
  ┣ Contact admin feature
- ┗ Paid promotion available.**
+ ┗ Paid promotion available.</b>
 
 ✨ 𝗠𝗮𝗱𝗲 𝘄𝗶𝘁𝗵 ❤️ 𝗕𝘆 [𝗔𝗻𝗶𝗺𝗲𝘀𝗵 𝗩𝗲𝗿𝗺𝗮](https://telegram.me/AniMesH941)
  **――――――――――――――――――――――**
 ✨ 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 [𝗧𝗲𝗮𝗺 𝗟𝗶𝗯𝗿𝗮𝗿𝗶𝗮𝗻™️](https://telegram.me/Team_Librarian)
 """
-FILES_TEXT = """ **★ Hello {}, You Can Search Your Desired Materials anytime via Inline Mode.**
-**❍ With this mode, You can get your desired Books, Handwritten Notes, Short Notes in PDF Format directly which are available in Team Librarian Database.**
-**❍ You Can Also Request Your Book To Be Added In Our Database, Request Your Book via @LibrarianHelpBot.**
+FILES_TEXT = """<b>★ Hello {}, You Can Search Your Desired Materials anytime via Inline Mode.
+❍ With this mode, You can get your desired Books, Handwritten Notes, Short Notes in PDF Format directly which are available in Team Librarian Database.
+❍ You Can Also Request Your Book To Be Added In Our Database, Request Your Book via @LibrarianHelpBot.</b>
 
-**➧ To use this bot, Type Our Bot's Username and Start Searching,**
-    **@EntranceMaterialsBot {Your Filename}**
+<b>➧ To use this bot, Type Our Bot's Username and Start Searching,
+    @EntranceMaterialsBot {Your Filename}</b>
 
-**➧ Check This Demo {Example}:** 
+<b>➧ Check This Demo {Example}:</b> 
     `@EntranceMaterialsBot Ncert`
 
-**★ You can also use the Buttons Below For Searching Your Files, Click**
-**[● Search Here] :** To Search Files in this Chat.
-**[● Go Inline] :** To Search Your Files in another Chat.
+<b>★ You can also use the Buttons Below For Searching Your Files, Click </b>
+<b>[● Search Here] :</b> To Search Files in this Chat.
+<b>[● Go Inline] :</b> To Search Your Files in another Chat.
 
-**★ For Reporting any Issues, Or If you need any help, You can report them at the Support Group @Librarian_Institute**
+<b>★ For Reporting any Issues, Or If you need any help, You can report them at the Support Group @Librarian_Institute</b>
 
-✨ 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 [𝗧𝗲𝗮𝗺 𝗟𝗶𝗯𝗿𝗮𝗿𝗶𝗮𝗻™️](https://telegram.me/Team_Librarian)
-"""
+✨ 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 [𝗧𝗲𝗮𝗺 𝗟𝗶𝗯𝗿𝗮𝗿𝗶𝗮𝗻™️](https://telegram.me/Team_Librarian)"""
+
                              
-ABOUT_TEXT = """ **● Name : Material Provider Bot**
-**● Creator : [Animesh](https://telegram.me/AniMesH941)**
-**● Language : [Python3](https://python.org)**
-**● Server : [Heroku](https://heroku.com)**
-**● Source Code : [Click Here](https://t.me/Want_SourceCode)**
+ABOUT_TEXT = """<b> ● Name : Material Provider Bot</b>
+<b>● Creator : [Animesh](https://telegram.me/AniMesH941)</b>
+<b>● Language : [Python3](https://python.org)</b>
+<b>● Server : [Heroku](https://heroku.com)</b>
+<b>● Source Code : [Click Here](https://t.me/Want_SourceCode)</b>
 
-**● Powered By : [Team Librarian™️](https://telegram.me/Team_Librarian)**
-"""
+<b>● Powered By : [Team Librarian™️](https://telegram.me/Team_Librarian)</b> """
+
 
 START_BUTTONS = InlineKeyboardMarkup(
             [
