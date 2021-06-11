@@ -5,17 +5,16 @@
 import os
 import logging
 import logging.config
-
-# Get logging configurations
-logging.config.fileConfig('logging.conf')
-logging.getLogger().setLevel(logging.ERROR
-                             
-from pyrogram import filters 
+from pyrogram import Client, filters 
 from pyrogram.raw.all import layer
 from utils import Media
 from info import SESSION, API_ID, API_HASH, BOT_TOKEN
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
+# Get logging configurations
+logging.config.fileConfig('logging.conf')
+logging.getLogger().setLevel(logging.ERROR
+                             
 AnimeshVerma = Client(
     "Material Bot",
     session_name= os.environ["SESSION"],
