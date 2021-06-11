@@ -24,14 +24,14 @@ logging.getLogger().setLevel(logging.ERROR
     api_hash = os.environ["API_HASH"]
    )
 
-START_TEXT = """**Hello {}, I am a Simple Material Provider Bot.**
+START_TEXT = """ **Hello {}, I am a Simple Material Provider Bot.**
 **I Can Provide You all Materials Related to Entrance Examinations**
 
 **Check Below Buttons To know more:**
 **Developed By [𝗔𝗡𝗜𝗠𝗘𝗦𝗛](https://t.me/AniMesH941)**
 """
 
-HELP_TEXT = """**☛ Hii {}, I Can Provide You Any Book In PDF Format**
+HELP_TEXT = """ **☛ Hii {}, I Can Provide You Any Book In PDF Format**
 **Although I'm The First Bot On Whole Telegram, Developed Using python**
 
 **🤖 Features of this Bot-
@@ -46,7 +46,7 @@ HELP_TEXT = """**☛ Hii {}, I Can Provide You Any Book In PDF Format**
  **――――――――――――――――――――――**
 ✨ 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 [𝗧𝗲𝗮𝗺 𝗟𝗶𝗯𝗿𝗮𝗿𝗶𝗮𝗻™️](https://telegram.me/Team_Librarian)
 """
-FILES_TEXT = """**★ Hello {}, You Can Search Your Desired Materials anytime via Inline Mode.**
+FILES_TEXT = """ **★ Hello {}, You Can Search Your Desired Materials anytime via Inline Mode.**
 **❍ With this mode, You can get your desired Books, Handwritten Notes, Short Notes in PDF Format directly which are available in Team Librarian Database.**
 **❍ You Can Also Request Your Book To Be Added In Our Database, Request Your Book via @LibrarianHelpBot.**
 
@@ -65,7 +65,7 @@ FILES_TEXT = """**★ Hello {}, You Can Search Your Desired Materials anytime vi
 ✨ 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 [𝗧𝗲𝗮𝗺 𝗟𝗶𝗯𝗿𝗮𝗿𝗶𝗮𝗻™️](https://telegram.me/Team_Librarian)
 """
                              
-ABOUT_TEXT = """**● Name : Material Provider Bot**
+ABOUT_TEXT = """ **● Name : Material Provider Bot**
 **● Creator : [Animesh](https://telegram.me/AniMesH941)**
 **● Language : [Python3](https://python.org)**
 **● Server : [Heroku](https://heroku.com)**
