@@ -4,7 +4,7 @@
 
 import os
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 AnimeshVerma = Client(
     "Material Bot",
@@ -127,10 +127,9 @@ async def cb_data(bot, update):
             text=DISCLAIMER_TEXT,
             disable_web_page_preview=True,
             reply_markup=DISCLAIMER_BUTTONS
-    else:
+    else: 
         await update.message.delete()
-    
-
+            
 @AnimeshVerma.on_message(filters.command(["start"]))
 async def help(bot, update):
     text = START_TEXT.format(update.from_user.mention)
