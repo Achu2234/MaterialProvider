@@ -1,5 +1,3 @@
-$ heroku create myapp --buildpack heroku/python
-
 {
     "name": "Material-Bot",
     "description": "A Simple Material Provider Telegram Bot",
