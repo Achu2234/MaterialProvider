@@ -72,15 +72,14 @@ START_BUTTONS = InlineKeyboardMarkup(
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('🏠 Home', callback_data='home'),
-        InlineKeyboardButton('🤖 About', callback_data='about'),
-        InlineKeyboardButton('⛔️ Close', callback_data='close')
+        InlineKeyboardButton('🤖 About', callback_data='about')
         ]]
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('🏠 Home', callback_data='home'),
         InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-        InlineKeyboardButton('⛔️ Close', callback_data='close')
+        InlineKeyboardButton('🤖 About', callback_data='about')
         ]]
     )
 DISCLAIMER_BUTTONS = InlineKeyboardMarkup(
@@ -94,13 +93,6 @@ DISCLAIMER_BUTTONS = InlineKeyboardMarkup(
            ]
         ]
      ) 
-CLOSE_BUTTONS = InlineKeyboardMarkup(
-        [
-            [
-        InlineKeyboardButton('⛔️ Close', callback_data='close')
-            ]
-         ]
-     )
 
 @AnimeshVerma.on_callback_query()
 async def cb_data(bot, update):
