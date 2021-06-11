@@ -17,10 +17,14 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 AnimeshVerma = Client(
     "Material Bot",
+    session_name= os.environ["SESSION"],
     bot_token = os.environ["BOT_TOKEN"],
     api_id = int(os.environ["API_ID"]),
     api_hash = os.environ["API_HASH"]
-)
+    workers=50,
+    plugins={"root": "plugins"},
+    sleep_threshold=5,
+   )
 
 START_TEXT = """
 **Hello {}, I am a Simple Material Provider Bot.**
@@ -57,23 +61,27 @@ ABOUT_TEXT = """
 """
 
 START_BUTTONS = InlineKeyboardMarkup(
-       [
             [
-             InlineKeyboardButton('⚠️ Disclaimer', url='https://telegra.ph/DISCLAIMER-04-28-5'),
-             InlineKeyboardButton('🤖 About', callback_data='about')
-            ],
-             [
-              InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-              InlineKeyboardButton('⛔️ Close', callback_data='close')
-             ]
+              [
+              InlineKeyboardButton('📒 Find Entrance Examination Materials 📝', callback_data='files')
+             ],
+              [
+               InlineKeyboardButton('ℹ️ Help', callback_data='help'),
+               InlineKeyboardButton('🤖 About', callback_data='about')
+               InlineKeyboardButton('⛔️ Close', callback_data='close')
+              ]
         ]
     )
 HELP_BUTTONS = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton('🏠 Home', callback_data='home'),
-        InlineKeyboardButton('🤖 About', callback_data='about'),
-        InlineKeyboardButton('⛔️ Close', callback_data='close')
-        ]]
+        [
+          [
+           InlineKeyboardButton('🏠 Home', callback_data='home'),
+           InlineKeyboardButton('🤖 About', callback_data='about')
+          ],
+           [
+           InlineKeyboardButton('📒 Find Entrance Examination Materials 📝', callback_data='files') 
+           ]
+        ]
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
