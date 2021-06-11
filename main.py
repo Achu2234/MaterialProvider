@@ -3,14 +3,17 @@
 # Copyright permission under GNU License
 
 import os
-import logging
-import logging.config
-from pyrogram Clients, Filters
-from pyrogram.types ChatEventFilter
+from pyrogram import Client, filters
 from pyrogram.raw.all import layer
 from utils import Media
 from info import SESSION, API_ID, API_HASH, BOT_TOKEN
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+
+import logging
+import logging.config
+
+
+
 
 # Get logging configurations
 logging.config.fileConfig('logging.conf')
