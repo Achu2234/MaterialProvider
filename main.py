@@ -58,7 +58,7 @@ DISCLAIMER_TEXT = """
 """
 
 START_BUTTONS = InlineKeyboardMarkup(
-        [
+       [
             [
              InlineKeyboardButton('⚠️ Disclaimer', callback_data='terms'),
              InlineKeyboardButton('🤖 About', callback_data='about')
@@ -72,14 +72,16 @@ START_BUTTONS = InlineKeyboardMarkup(
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('🏠 Home', callback_data='home'),
-        InlineKeyboardButton('🤖 About', callback_data='about')
+        InlineKeyboardButton('🤖 About', callback_data='about'),
+        InlineKeyboardButton('⛔️ Close', callback_data='close')
         ]]
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
+        InlineKeyboardButton('📮 Feedback', url='https://telegram.me/AniMesH941')
+        ],[
         InlineKeyboardButton('🏠 Home', callback_data='home'),
-        InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-        InlineKeyboardButton('🤖 About', callback_data='about')
+        InlineKeyboardButton('⛔️ Close', callback_data='close')
         ]]
     )
 DISCLAIMER_BUTTONS = InlineKeyboardMarkup(
@@ -89,22 +91,28 @@ DISCLAIMER_BUTTONS = InlineKeyboardMarkup(
           ],
            [
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
+            InlineKeyboardButton('🤖 About', callback_data='about'),
             InlineKeyboardButton('🏠 Home', callback_data='home')
            ]
         ]
-     ) 
+     )   
+CLOSE_BUTTON = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('⛔️ Close', callback_data='close')
+        ]]
+    )
 
 @AnimeshVerma.on_callback_query()
 async def cb_data(bot, update):
     if update.data == "home":
         await update.message.edit_text(
-            text=HELP_TEXT.format(update.from_user.mention),
+            text=START_TEXT.format(update.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=START_BUTTONS
         )
     elif update.data == "help":
         await update.message.edit_text(
-            text=HELP_TEXT,
+            text=HELP_TEXT.format(update.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=HELP_BUTTONS
         )
@@ -119,9 +127,13 @@ async def cb_data(bot, update):
             text=DISCLAIMER_TEXT,
             disable_web_page_preview=True,
             reply_markup=DISCLAIMER_BUTTONS
-            
+        )
+    else:
+        await update.message.delete()
+    
+
 @AnimeshVerma.on_message(filters.command(["start"]))
-async def help(bot, update):
+async def start(bot, update):
     text = START_TEXT.format(update.from_user.mention)
     reply_markup = START_BUTTONS
     await update.reply_text(
@@ -129,9 +141,8 @@ async def help(bot, update):
         disable_web_page_preview=True,
         reply_markup=reply_markup
     )
-
 @AnimeshVerma.on_message(filters.command(["help"]))
-async def start(bot, update):
+async def help(bot, update):
     text = HELP_TEXT.format(update.from_user.mention)
     reply_markup = HELP_BUTTONS
     await update.reply_text(
@@ -139,5 +150,5 @@ async def start(bot, update):
         disable_web_page_preview=True,
         reply_markup=reply_markup
     )
-          
+            
 AnimeshVerma.run()
