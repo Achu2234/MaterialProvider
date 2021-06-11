@@ -47,20 +47,10 @@ ABOUT_TEXT = """
 **● Powered By : [Team Librarian™️](https://telegram.me/Team_Librarian)**
 """
 
-DISCLAIMER_TEXT = """
- **• We are strictly against piracy.**
- **• You will be sent your desired books via bot within 6 hours to 6 days.**
- **• You can join our daily E-Newspaper service by contacting admin. All English, Hindi, Marathi & Other Regional News Updates For Examinations available.**
- **• Spamming inside the bot may lead you ban forever.**
- **• We may promote some Ads here to overcome server and maintainence expenses. Contact Admin for more info.**
- 
-**‼️ Check This Telegraph Link Before You Ask For Any Book - [Click Here ⚠️](https://telegra.ph/DISCLAIMER-04-28-5)**
-"""
-
 START_BUTTONS = InlineKeyboardMarkup(
        [
             [
-             InlineKeyboardButton('⚠️ Disclaimer', callback_data='disclaimer'),
+             InlineKeyboardButton('⚠️ DMCA ⚠️', url='https://telegra.ph/DISCLAIMER-04-28-5'),
              InlineKeyboardButton('🤖 About', callback_data='about')
             ],
              [
@@ -84,18 +74,6 @@ ABOUT_BUTTONS = InlineKeyboardMarkup(
         InlineKeyboardButton('⛔️ Close', callback_data='close')
         ]]
     )
-DISCLAIMER_BUTTONS = InlineKeyboardMarkup(
-        [
-          [
-        InlineKeyboardButton('⚜️ Share Our Bot With Your Friends 🤖', url="""https://t.me/share/text?text=**Hey, Check What I Found... The Best Telegram Bot To Provide You Study Materials, Developed In Pyrogram & Python 3. Check Now @EntranceMaterialsBot Don't Miss It 👋🏻"""),
-          ],
-           [
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('🤖 About', callback_data='about'),
-            InlineKeyboardButton('🏠 Home', callback_data='home')
-           ]
-        ]
-     )   
 CLOSE_BUTTON = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('⛔️ Close', callback_data='close')
@@ -121,12 +99,6 @@ async def cb_data(bot, update):
             text=ABOUT_TEXT,
             disable_web_page_preview=True,
             reply_markup=ABOUT_BUTTONS
-        )
-    elif update.data == "disclaimer":
-        await update.message.edit_text(
-            text=DISCLAIMER_TEXT,
-            disable_web_page_preview=True,
-            reply_markup=DISCLAIMER_BUTTONS
         )
     else:
         await update.message.delete()
