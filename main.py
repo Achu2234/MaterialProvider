@@ -5,7 +5,6 @@
 import os
 import logging
 import logging.config
-from pyrogram import Client, filters 
 from pyrogram.raw.all import layer
 from utils import Media
 from info import SESSION, API_ID, API_HASH, BOT_TOKEN
