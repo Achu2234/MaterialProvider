@@ -25,14 +25,6 @@ $ heroku create myapp --buildpack heroku/python
             "value": "",
             "required": false
         },
-        "API_ID": {
-            "description": "Get this value from https://my.telegram.org",
-            "value": ""
-        },
-        "API_HASH": {
-            "description": "Get this value from https://my.telegram.org",
-            "value": ""
-        },
         "CHANNELS": {
             "description": "Username or ID of channel or group. Separate multiple IDs by space.",
             "value": ""
