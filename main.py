@@ -119,8 +119,6 @@ async def cb_data(bot, update):
             text=DISCLAIMER_TEXT,
             disable_web_page_preview=True,
             reply_markup=DISCLAIMER_BUTTONS
-    else: 
-        await update.message.delete()
             
 @AnimeshVerma.on_message(filters.command(["start"]))
 async def help(bot, update):
