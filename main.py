@@ -3,7 +3,16 @@
 # Copyright permission under GNU License
 
 import os
+import logging
+import logging.config
+
+# Get logging configurations
+logging.config.fileConfig('logging.conf')
+logging.getLogger().setLevel(logging.ERROR
+                             
 from pyrogram import Client, filters
+from pyrogram.raw.all import layer
+from utils import Media              
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 AnimeshVerma = Client(
@@ -33,8 +42,8 @@ HELP_TEXT = """
  ┣ Contact admin feature
  ┗ Paid promotion available.**
 
-✨ 𝗦𝗵𝗮𝗿𝗲 𝗠𝗲, 𝗠𝗮𝗱𝗲 𝘄𝗶𝘁𝗵 ❤️ 𝗕𝘆 [𝗔𝗻𝗶𝗺𝗲𝘀𝗵 𝗩𝗲𝗿𝗺𝗮](https://telegram.me/AniMesH941)
- **―――――――――――――――――――――――――――――**
+✨ 𝗠𝗮𝗱𝗲 𝘄𝗶𝘁𝗵 ❤️ 𝗕𝘆 [𝗔𝗻𝗶𝗺𝗲𝘀𝗵 𝗩𝗲𝗿𝗺𝗮](https://telegram.me/AniMesH941)
+ **――――――――――――――――――――――**
 ✨ 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 [𝗧𝗲𝗮𝗺 𝗟𝗶𝗯𝗿𝗮𝗿𝗶𝗮𝗻™️](https://telegram.me/Team_Librarian)
 """
 
