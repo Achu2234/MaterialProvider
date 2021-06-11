@@ -60,7 +60,7 @@ DISCLAIMER_TEXT = """
 START_BUTTONS = InlineKeyboardMarkup(
        [
             [
-             InlineKeyboardButton('⚠️ Disclaimer', callback_data='terms'),
+             InlineKeyboardButton('⚠️ Disclaimer', callback_data='disclaimer'),
              InlineKeyboardButton('🤖 About', callback_data='about')
             ],
              [
@@ -122,7 +122,7 @@ async def cb_data(bot, update):
             disable_web_page_preview=True,
             reply_markup=ABOUT_BUTTONS
         )
-    elif update.data == "terms":
+    elif update.data == "disclaimer":
         await update.message.edit_text(
             text=DISCLAIMER_TEXT,
             disable_web_page_preview=True,
